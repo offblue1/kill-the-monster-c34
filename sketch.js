@@ -16,11 +16,11 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   
-  ground = new Ground(width/2,790,width+300,10);
-  g2 = new Ground(800,700,500,10);
-  hero = new Hero(250,400,45);
-  rope = new Rope(hero.body,{x:300,y:150});
-  monster = new Monster(1300,200,45);
+  //ground = new Ground(width/2,790,width+300,10);
+  g2 = new Ground(400,700,1900,10);
+  hero = new Hero(250,400,250);
+  rope = new Rope(hero.body,{x:500,y:50});
+  monster = new Monster(1200,550,300);
 
   b1 = new Box(900,100,70,70);
     b2 = new Box(900,100,70,70);
@@ -49,9 +49,9 @@ function draw() {
   background(bg);
   Engine.update(engine);
 
-  detectollision(hero,monster);
+  //detectollision(hero,monster);
 
-  ground.display();
+  //ground.display();
   g2.display();
   hero.display();
   rope.display();
